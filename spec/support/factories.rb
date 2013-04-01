@@ -20,7 +20,7 @@ FactoryGirl.define do
     sequence :first_name do generate :person_name; end
     sequence :last_name  do generate :person_name; end
     
-    middle_initial do [*?a..?z][rand(26) % 26]; end
+    middle_initial do [*?A..?Z][rand(26) % 26]; end
     gender do rand(2) == 1 ? "Female" : "Male"; end
     favorite_color do %w(Turquoise Magenta Octarine).sample; end
     
