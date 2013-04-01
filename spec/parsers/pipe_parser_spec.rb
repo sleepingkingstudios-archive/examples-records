@@ -12,14 +12,7 @@ describe Parsers::PipeParser do
   
   describe 'with sample data' do
     let :attributes do FactoryGirl.attributes_for :person; end
-    let :source do
-      str = "#{attributes[:last_name]}" +
-        " | #{attributes[:first_name]}" +
-        " | #{attributes[:middle_initial]}" +
-        " | #{attributes[:gender][0]}" +
-        " | #{attributes[:favorite_color]}" +
-        " | #{attributes[:date_of_birth].gsub('/', '-')}"
-    end # let
+    let :source do Parsers::FORMATS[:pipe].call attributes; end
     let :person do instance.parse source; end
     
     specify { expect(person).to be_a Person }

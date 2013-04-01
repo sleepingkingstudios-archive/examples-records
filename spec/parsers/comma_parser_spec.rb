@@ -12,13 +12,7 @@ describe Parsers::CommaParser do
   
   describe 'with sample data' do
     let :attributes do FactoryGirl.attributes_for :person; end
-    let :source do
-      str = "#{attributes[:last_name]}" +
-        ", #{attributes[:first_name]}" +
-        ", #{attributes[:gender]}" +
-        ", #{attributes[:favorite_color]}" +
-        ", #{attributes[:date_of_birth]}"
-    end # let
+    let :source do Parsers::FORMATS[:comma].call attributes; end
     let :person do instance.parse source; end
     
     specify { expect(person).to be_a Person }

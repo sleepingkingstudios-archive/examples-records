@@ -19,8 +19,8 @@ module Parsers
       \g<first_name>\s*
       \g<middle_initial>\s*
       \g<gender>[a-z]*\s*
-      \g<favorite_color>\s*
-      \g<date_of_birth>
+      \g<date_of_birth>\s*
+      \g<favorite_color>
     )x
     
     def initialize
