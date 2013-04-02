@@ -3,6 +3,8 @@
 
 **Author:** Robert Smith
 
+**Email:** rob.smith@sleepingkingstudios.com
+
 **Completion Date:** 2013-04-02
 
 ### How To Use
