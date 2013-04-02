@@ -4,6 +4,9 @@ require 'parsers/person_parser'
 
 module Parsers
   class PipeParser < PersonParser
+    # Processes a string of the form:
+    # 
+    #   Smith | Steve | D | M | Red | 3-3-1985
     PATTERN = %r(
       (?<last_name>      [A-Z][a-z]+ ){0}
       (?<first_name>     [A-Z][a-z]+ ){0}

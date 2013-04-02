@@ -1,3 +1,5 @@
+# OS-Specific Files
 .DS_Store
 
-test.rb
+.yardoc
+output.txt

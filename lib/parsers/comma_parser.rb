@@ -4,6 +4,9 @@ require 'parsers/person_parser'
 
 module Parsers
   class CommaParser < PersonParser
+    # Processes a string of the form:
+    # 
+    #   Abercrombie, Neil, Male, Tan, 2/13/1943
     PATTERN = %r(
       (?<last_name>      [A-Z][a-z]+ ){0}
       (?<first_name>     [A-Z][a-z]+ ){0}

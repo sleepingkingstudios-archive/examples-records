@@ -36,18 +36,10 @@ describe PersonReader do
   end # describe
   
   describe 'with pipe-separated records' do
-    before :each do
-      attributes.each { |attrs| attrs[:gender] = attrs[:gender][0] }
-    end # before each
-    
     read_formatted_stream &Parsers::FORMATS[:pipe]
   end # describe
 
   describe 'with space-separated records' do
-    before :each do
-      attributes.each { |attrs| attrs[:gender] = attrs[:gender][0] }
-    end # before each
-    
     read_formatted_stream &Parsers::FORMATS[:pipe]
   end # describe
 end # describe

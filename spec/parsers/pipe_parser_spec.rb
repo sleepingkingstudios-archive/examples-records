@@ -19,7 +19,7 @@ describe Parsers::PipeParser do
     specify { expect(person.last_name).to      be == attributes[:last_name] }
     specify { expect(person.first_name).to     be == attributes[:first_name] }
     specify { expect(person.middle_initial).to be == attributes[:middle_initial] }
-    specify { expect(person.gender).to         be == attributes[:gender][0] }
+    specify { expect(person.gender).to         be == attributes[:gender] }
     specify { expect(person.favorite_color).to be == attributes[:favorite_color] }
     specify { expect(person.date_of_birth).to  be == attributes[:date_of_birth] }
   end # describe

@@ -4,6 +4,9 @@ require 'parsers/person_parser'
 
 module Parsers
   class SpaceParser < PersonParser
+    # Processes a string of the form:
+    # 
+    #   Kournikova Anna F F 6-3-1975 Red
     PATTERN = %r(
       (?<last_name>      [A-Z][a-z]+ ){0}
       (?<first_name>     [A-Z][a-z]+ ){0}
